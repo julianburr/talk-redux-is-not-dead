@@ -4,8 +4,6 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { PersistGate } from 'redux-persist/integration/react';
 
-import { StarterProvider } from './context/starter';
-
 import './styles/index.css';
 import './styles/fonts.css';
 
