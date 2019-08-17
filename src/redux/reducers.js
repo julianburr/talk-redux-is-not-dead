@@ -47,7 +47,7 @@ export const team = (state = [], action) => {
 };
 
 export const pokemon = (
-  state = { items: [], loading: null, error: null, details: {} },
+  state = { items: [], loading: null, error: null },
   action
 ) => {
   switch (action.type) {
@@ -62,11 +62,6 @@ export const pokemon = (
       };
     case '@@pokemon/FAILED':
       return { ...state, loading: true, error: action.payload, items: [] };
-    case '@@pokemon/DETAILS/LOADED':
-      return {
-        ...state,
-        details: { ...state.details, [action.payload.id]: action.payload }
-      };
     case '@@app/RESET':
       return { loading: null, error: null, items: [], details: {} };
     default:

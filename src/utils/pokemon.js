@@ -62,35 +62,6 @@ export function loadPokemon () {
   };
 }
 
-export function loadPokemonDetails (id) {
-  return (dispatch, getState) => {
-    const { loading, details } = getState().pokemon;
-
-    // Don't do anything if we already have items
-    if (details && details[id]) {
-      return;
-    }
-
-    dispatch({
-      type: '@@pokemon/DETAILS/LOAD',
-      payload: id
-    });
-    fetchPokemonDetails(id)
-      .then((data) =>
-        dispatch({
-          type: '@@pokemon/DETAILS/LOADED',
-          payload: data
-        })
-      )
-      .catch((e) =>
-        dispatch({
-          type: '@@pokemon/DETAILS/FAILED',
-          payload: e.message
-        })
-      );
-  };
-}
-
 export function getSprite (id) {
   if (!id) {
     return;

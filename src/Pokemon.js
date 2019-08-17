@@ -1,8 +1,8 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import './styles/Pokemon.css';
-import { loadPokemonDetails, getSprite, getBall } from './utils/pokemon';
+import { fetchPokemonDetails, getSprite, getBall } from './utils/pokemon';
 import { titleCase } from './utils/format';
 
 import Types from './Types';
@@ -19,7 +19,8 @@ function Pokemon ({ match }) {
     return fromList ? fromList.name : null;
   });
   const team = useSelector((state) => state.team);
-  const details = useSelector((state) => state.pokemon.details[id]);
+
+  const [ details, setDetails ] = useState(null);
 
   const name = nameFromList ? nameFromList : details ? details.name : '???';
 
@@ -30,9 +31,9 @@ function Pokemon ({ match }) {
   const dispatch = useDispatch();
   useEffect(
     () => {
-      dispatch(loadPokemonDetails(id));
+      fetchPokemonDetails(id).then((data) => setDetails(data));
     },
-    [ id ]
+    [ id, setDetails ]
   );
 
   return (
