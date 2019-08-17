@@ -1,0 +1,86 @@
+.pokemon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.pokemon > .inner {
+  width: 100%;
+  max-width: 80rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.pokemon .pokemon--image {
+  width: 24rem;
+  height: 24rem;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pokemon .pokemon--image img {
+  height: 100%;
+}
+
+.pokemon .pokemon--details {
+  padding-top: 1rem;
+}
+
+.pokemon .pokemon--details--title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.pokemon .pokemon--details--title .pokemon--details--catch {
+  padding: 0;
+  border: 0 none;
+  background: transparent;
+  margin-right: 1rem;
+  filter: grayscale();
+  transform: scale(.8);
+  transition: transform .3s, filter .3s;
+  cursor: pointer;
+}
+
+.pokemon .pokemon--details--title .pokemon--details--catch:hover {
+  transform: scale(1) rotate(10deg);
+}
+
+.pokemon .pokemon--details--title .pokemon--details--catch:active {
+  transform: scale(1.4);
+}
+
+.pokemon .pokemon--details--title .pokemon--details--catch svg {
+  height: 2.8rem;
+}
+
+.pokemon .pokemon--details--title .pokemon--details--caught {
+  filter: none;
+}
+
+.pokemon .pokemon--details--label {
+  font-weight: 900;
+}
+
+.pokemon .pokemon--details--types {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.pokemon .pokemon--details--type {
+  padding: .4rem .8rem;
+  margin: .2rem;
+  background: #f2e8db;
+  border-radius: .2rem;
+}

@@ -1,0 +1,16 @@
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list > .inner {
+  width: 100%;
+  max-width: 80rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+

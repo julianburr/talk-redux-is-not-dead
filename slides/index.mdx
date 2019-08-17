@@ -1,0 +1,90 @@
+import myTheme, { Styles } from './theme';
+export const theme = myTheme;
+
+import Title from './components/Title';
+import Conclusion from './components/Conclusion';
+import Sketch from './components/Sketch';
+
+import tombstonePath from './assets/tombstone.svg';
+import zombiePath from './assets/zombie.svg';
+
+---
+
+<Title src={tombstonePath} title="Redux is dead" />
+
+---
+
+<Title src={zombiePath} title="Long live Redux" />
+
+---
+
+<Conclusion>Use whatever solves the problem and works best for you, your team and your use case!</Conclusion>
+
+---
+
+<Styles />
+
+# Redux
+
+<Sketch left='calc(50% + 130px)' top='80px' rotate='8deg'>= <b>Red</b>ucer + Fl<b>ux</b> 🤯</Sketch>
+
+- State management that works with hot reloading
+- Flux like state management with less boilerplate
+- Tooling like time travel for better DX
+
+---
+
+<Styles />
+
+# Redux
+
+- Single source of truth
+- State is read-only
+- Changes to the state are only done by pure functions
+
+---
+
+<Styles />
+
+# What we use Redux for
+
+- Prevent prop drilling
+- UI state
+- Form data
+- API data
+- Persist and automatically rehydrate state
+
+---
+
+<Styles />
+
+# What are the "alternatives"
+
+- Local state
+- React Context
+- React Hooks
+- GraphQL + libraries like Apollo
+- React Suspense
+
+---
+
+<Conclusion>Lets have a look at code...</Conclusion>
+
+---
+
+<Styles />
+
+# Myth Busting
+
+- Redux is super verbose
+- Redux is slow
+- Redux blows up your bundle size
+- You don't need Redux
+
+---
+
+# So which one should I use?
+
+---
+
+<Conclusion>The End</Conclusion>

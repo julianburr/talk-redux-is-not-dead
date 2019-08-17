@@ -1,0 +1,101 @@
+.header {
+  color: #fff;
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.header-green {
+  background: #33b166;
+}
+
+.header-red {
+  background: #e76206;
+}
+
+.header-blue {
+  background: #70d3e0;
+}
+
+.header-yellow {
+  background: #ffb000;
+}
+
+.header .inner {
+  width: 100%;
+  max-width: 80rem;
+  justify-content: space-between;
+}
+
+.header .inner,
+.header .inner--left,
+.header .inner--right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header a {
+  font-family: "Fredoka One";
+  height: 7rem;
+  padding: 0 2rem;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .2s;
+  position: relative;
+}
+
+.header a:before {
+  position: absolute;
+  top: calc(50% + 1.2rem);
+  left: 1.6rem;
+  right: 1.6rem;
+  content: ' ';
+  opacity: 0;
+  transition: opacity .2s;
+  background: #fff;
+  z-index: 100;
+  height: .3rem;
+  border-radius: .15rem;
+}
+
+.header a.active:before {
+  opacity: 1;
+}
+
+.header .header--badge {
+  font-size: 1.2rem;
+  height: 1.8rem;
+  min-width: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: .9rem;
+  padding: 0 .3rem;
+  background: #fff;
+  transform: translate3d(.3rem, -.5rem, 0);
+}
+
+.header-green .header--badge {
+  color: #33b166;
+}
+
+.header-red .header--badge {
+  color: #e76206;
+}
+
+.header-blue .header--badge {
+  color: #70d3e0;
+}
+
+.header-yellow .header--badge {
+  color: #ffb000;
+}
