@@ -3,12 +3,13 @@ import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
 import './styles/Navigation.css';
+import { ThemeContext } from './context/theme';
 import SpeedToggle from './SpeedToggle';
 
 function Navigation () {
   const dispatch = useDispatch();
 
-  const theme = useSelector((state) => state.theme);
+  const { theme, resetTheme } = useContext(ThemeContext);
   const team = useSelector((state) => state.team);
 
   return (
@@ -27,6 +28,7 @@ function Navigation () {
           <a
             href="#"
             onClick={() => {
+              resetTheme();
               dispatch({ type: '@@app/RESET' });
             }}
           >

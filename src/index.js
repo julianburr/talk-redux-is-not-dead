@@ -4,6 +4,8 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { PersistGate } from 'redux-persist/integration/react';
 
+import { ThemeProvider } from './context/theme';
+
 import './styles/index.css';
 import './styles/fonts.css';
 
@@ -13,11 +15,13 @@ import App from './App';
 const render = (Component) => {
   return ReactDOM.render(
     <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <BrowserRouter>
-          <Component />
-        </BrowserRouter>
-      </PersistGate>
+      <ThemeProvider>
+        <PersistGate loading={null} persistor={persistor}>
+          <BrowserRouter>
+            <Component />
+          </BrowserRouter>
+        </PersistGate>
+      </ThemeProvider>
     </Provider>,
     document.getElementById('root')
   );

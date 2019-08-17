@@ -20,17 +20,6 @@ export const session = (state = {}, action) => {
   }
 };
 
-export const theme = (state = null, action) => {
-  switch (action.type) {
-    case '@@app/SELECT_STARTER':
-      return mapPokemonToTheme[action.payload];
-    case '@@app/RESET':
-      return null;
-    default:
-      return state;
-  }
-};
-
 export const team = (state = [], action) => {
   switch (action.type) {
     case '@@app/SELECT_STARTER':
