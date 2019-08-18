@@ -23,13 +23,13 @@ function delay () {
 }
 
 export async function fetchPokemon () {
-  await delay(2000);
+  await delay();
   const { items } = require('../data/pokemon.json');
   return items;
 }
 
 export async function fetchPokemonDetails (id) {
-  await delay(2000);
+  await delay();
   const details = require(`../data/${id}.json`);
   return details;
 }
