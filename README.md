@@ -250,3 +250,17 @@ I can't say it enough, choose whatever works best for you and your team. Please 
 
 This also works the other way round. Use the community to gather information about what solutions work for which problems. Don't strive for approval in the community, especially if they don't relate to the problem you're trying to solve. Whatever works for you and your team is a good solution.
 
+## Resources
+
+**Talks:**
+
+- React Europe 2015 - Dan Abramov - Hot Reloading, Redux and Time Travel - https://www.youtube.com/watch?v=xsSnOQynTHs
+- React Next 2019 - Mark Eriksen - A Deep Dive into React Redux - https://www.youtube.com/watch?v=zNs-phgKx3Q
+- jsPoland 2018 - Mateusz Titz - Redux is dead, long live Redux - https://www.youtube.com/watch?v=gtVUCO_bUjs
+- React Amsterdam 2018 - Kitze (Kristijan Ristovski) - React State Management In a GraphQL Era - https://www.youtube.com/watch?v=Q54YDGC_t3Y
+
+**Articles & Docs:**
+
+* https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367
+* https://redux.js.org/faq/general#further-information-1
+
